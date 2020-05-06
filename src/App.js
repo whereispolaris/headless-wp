@@ -3,16 +3,16 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			movies: []
+			movies: [],
 		};
 	}
 	componentDidMount() {
 		let dataURL = 'http://headlesswp.local/wp-json/wp/v2/movies?_embed';
 		fetch(dataURL)
-			.then(res => res.json())
-			.then(res => {
+			.then((res) => res.json())
+			.then((res) => {
 				this.setState({
-					movies: res
+					movies: res,
 				});
 			});
 	}
@@ -25,6 +25,7 @@ class App extends Component {
 							movie._embedded['wp:featuredmedia'][0].media_details.sizes.large
 								.source_url
 						}
+						alt={movie.title.rendered}
 					/>
 					<p>
 						<strong>Title:</strong> {movie.title.rendered}
