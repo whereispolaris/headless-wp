@@ -7,7 +7,7 @@ class App extends Component {
 		};
 	}
 	componentDidMount() {
-		let dataURL = 'http://headlesswp.local/wp-json/wp/v2/movies?_embed';
+		let dataURL = 'http://gitmaster.local/wp-json/wp/v2/movies?_embed';
 		fetch(dataURL)
 			.then((res) => res.json())
 			.then((res) => {
@@ -22,7 +22,7 @@ class App extends Component {
 				<div key={index}>
 					<img
 						src={
-							movie._embedded['wp:featuredmedia'][0].media_details.sizes.large
+							movie._embedded['wp:featuredmedia'][0].media_details.sizes.full
 								.source_url
 						}
 						alt={movie.title.rendered}
