@@ -27,9 +27,9 @@ class App extends Component {
 						}
 						alt={movie.title.rendered}
 					/>
-					<p>
+					<h2>
 						<strong>Title:</strong> {movie.title.rendered}
-					</p>
+					</h2>
 					<p>
 						<strong>Release Year:</strong> {movie.acf.release_year}
 					</p>
