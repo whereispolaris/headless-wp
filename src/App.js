@@ -8,6 +8,7 @@ class App extends Component {
 			movies: [],
 		};
 	}
+
 	componentDidMount() {
 		let dataURL = 'http://gitmaster.local/wp-json/wp/v2/movies?_embed';
 		fetch(dataURL)
@@ -21,34 +22,49 @@ class App extends Component {
 	render() {
 		let movies = this.state.movies.map((movie, index) => {
 			return (
-				<div className='container' key={index}>
-					<img
-						className='movie-poster'
-						src={
-							movie._embedded['wp:featuredmedia'][0].media_details.sizes.full
-								.source_url
-						}
-						alt={movie.title.rendered}
-					/>
-					<h2>
-						<strong>Title:</strong> {movie.title.rendered}
-					</h2>
-					<p>
-						<strong>Release Year:</strong> {movie.acf.release_year}
-					</p>
-					<p>
-						<strong>Rating:</strong> {movie.acf.rating}
-					</p>
-					<div>
-						<strong>Description:</strong>
-						<div dangerouslySetInnerHTML={{ __html: movie.acf.description }} />
+				<div key={index}>
+					<div className='container'>
+						<div className='movie-poster'>
+							<h2>
+								<strong>Title:</strong> {movie.title.rendered}
+							</h2>
+							<img
+								src={
+									movie._embedded['wp:featuredmedia'][0].media_details.sizes
+										.full.source_url
+								}
+								alt={movie.title.rendered}
+							/>
+						</div>
+
+						<div className='description'>
+							<p>
+								<strong>Release Year:</strong> {movie.acf.release_year}
+							</p>
+							<p>
+								<strong>Rating:</strong> {movie.acf.rating}
+							</p>
+							<strong>Description:</strong>
+							<div
+								dangerouslySetInnerHTML={{ __html: movie.acf.description }}
+							/>
+						</div>
 					</div>
+					<hr
+						style={{
+							color: 'red',
+							backgroundColor: 'red',
+							height: 5,
+						}}
+					/>
 				</div>
 			);
 		});
 		return (
 			<div>
-				<h2>Star Wars Movies</h2>
+				<h2 className='site-title'>
+					Star Wars Movies | Headless WordPress App
+				</h2>
 				{movies}
 			</div>
 		);

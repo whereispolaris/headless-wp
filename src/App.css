@@ -1,8 +1,22 @@
 .container {
 	display: flex; /* or inline-flex */
 	margin: 10px;
+	padding: 10px;
 }
 
-.movie-poster {
-	width: 600px;
+.site-title {
+	text-align: center;
+	font-size: 40px;
+}
+
+.description {
+	margin: 20px;
+}
+
+html {
+	margin: 20px;
+}
+
+p {
+	color: red;
 }
