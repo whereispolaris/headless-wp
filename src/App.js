@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './App.css';
+
 class App extends Component {
 	constructor() {
 		super();
@@ -19,7 +21,7 @@ class App extends Component {
 	render() {
 		let movies = this.state.movies.map((movie, index) => {
 			return (
-				<div key={index}>
+				<div className='container' key={index}>
 					<img
 						src={
 							movie._embedded['wp:featuredmedia'][0].media_details.sizes.full
