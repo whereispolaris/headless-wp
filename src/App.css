@@ -2,6 +2,7 @@
 	display: flex; /* or inline-flex */
 	margin: 10px;
 	padding: 10px;
+	border-bottom: red 10px solid;
 }
 
 .site-title {
@@ -14,9 +15,15 @@
 }
 
 html {
-	margin: 20px;
+	padding: 20px;
+	background-image: url('images/galaxy-stars-illustration.jpg');
+	background-attachment: fixed;
 }
 
 p {
-	color: red;
+	color: yellow;
+	font-size: 20px;
+}
+h2 {
+	color: #5ec3ed;
 }

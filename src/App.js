@@ -50,13 +50,6 @@ class App extends Component {
 							/>
 						</div>
 					</div>
-					<hr
-						style={{
-							color: 'red',
-							backgroundColor: 'red',
-							height: 5,
-						}}
-					/>
 				</div>
 			);
 		});
