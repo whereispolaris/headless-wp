@@ -23,6 +23,7 @@ class App extends Component {
 			return (
 				<div className='container' key={index}>
 					<img
+						className='movie-poster'
 						src={
 							movie._embedded['wp:featuredmedia'][0].media_details.sizes.full
 								.source_url
