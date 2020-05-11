@@ -10,7 +10,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		let dataURL = 'http://gitmaster.local/wp-json/wp/v2/movies?_embed';
+		let dataURL = 'https://gitmaster.wpengine.com/wp-json/wp/v2/movies?_embed';
 		fetch(dataURL)
 			.then((res) => res.json())
 			.then((res) => {
@@ -58,6 +58,7 @@ class App extends Component {
 				<h2 className='site-title'>
 					Star Wars Movies | Headless WordPress App
 				</h2>
+
 				{movies}
 			</div>
 		);
