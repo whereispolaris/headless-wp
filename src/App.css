@@ -45,9 +45,13 @@ li a {
 }
 
 html {
-	padding: 20px;
 	background-image: url('images/galaxy-stars-illustration.jpg');
 	background-attachment: fixed;
+}
+
+body {
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.6);
 }
 
 p {
