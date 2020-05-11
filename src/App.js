@@ -58,11 +58,32 @@ class App extends Component {
 			);
 		});
 		return (
-			<div>
+			<div className='header'>
 				<h2 className='site-title'>
 					Star Wars Movies | Headless WordPress App
 				</h2>
-
+				<div className='table'>
+					<ul className='menu'>
+						<li>
+							<a
+								href='https://github.com/whereispolaris/headless-wp'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								GitHub Repo
+							</a>
+						</li>
+						<li>
+							<a
+								href='http://gitmaster.wpengine.com/wp-json'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								WordPress REST API
+							</a>
+						</li>
+					</ul>
+				</div>
 				{movies}
 			</div>
 		);
