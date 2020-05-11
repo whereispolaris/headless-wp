@@ -10,7 +10,9 @@ class App extends Component {
 	}
 
 	componentDidMount() {
+		// Production
 		let dataURL = 'https://gitmaster.wpengine.com/wp-json/wp/v2/movies?_embed';
+
 		fetch(dataURL)
 			.then((res) => res.json())
 			.then((res) => {
@@ -24,7 +26,7 @@ class App extends Component {
 			return (
 				<div key={index}>
 					<div className='container'>
-						<div className='movie-poster'>
+						<div className='row-1'>
 							<h2>
 								<strong>Title:</strong> {movie.title.rendered}
 							</h2>
@@ -37,14 +39,16 @@ class App extends Component {
 							/>
 						</div>
 
-						<div className='description'>
+						<div className='row-2'>
 							<p>
 								<strong>Release Year:</strong> {movie.acf.release_year}
 							</p>
 							<p>
 								<strong>Rating:</strong> {movie.acf.rating}
 							</p>
-							<strong>Description:</strong>
+							<p>
+								<strong>Description:</strong>
+							</p>
 							<div
 								dangerouslySetInnerHTML={{ __html: movie.acf.description }}
 							/>
