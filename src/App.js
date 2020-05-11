@@ -58,7 +58,7 @@ class App extends Component {
 			);
 		});
 		return (
-			<div className='header'>
+			<div>
 				<h2 className='site-title'>
 					Star Wars Movies | Headless WordPress App
 				</h2>
