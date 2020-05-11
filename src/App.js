@@ -27,9 +27,7 @@ class App extends Component {
 				<div key={index}>
 					<div className='container'>
 						<div className='row-1'>
-							<h2>
-								<strong>Title:</strong> {movie.title.rendered}
-							</h2>
+							<h2>{movie.title.rendered}</h2>
 							<img
 								src={
 									movie._embedded['wp:featuredmedia'][0].media_details.sizes
@@ -59,9 +57,8 @@ class App extends Component {
 		});
 		return (
 			<div>
-				<h2 className='site-title'>
-					Star Wars Movies | Headless WordPress App
-				</h2>
+				<h2 className='site-title'>Star Wars</h2>
+				<h3 className='subheader'>Headless WordPress App</h3>
 				<div className='table'>
 					<ul className='menu'>
 						<li>
