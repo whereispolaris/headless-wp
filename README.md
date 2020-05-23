@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # Headless WordPress: Star Wars Edition :milky_way:
 
 I’ve created a React app that displays information about all the Star Wars movies. The information is going to be stored in WordPress (gitmaster.wpengine.com) and will be accessible by the React app through the REST API.
@@ -9,6 +7,10 @@ http://gitmaster.wpengine.com/wp-json
 
 Externally, there’s a React App Hosted In Heroku:
 https://headless-starwars.herokuapp.com/
+
+---
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
