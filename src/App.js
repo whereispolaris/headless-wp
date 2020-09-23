@@ -11,7 +11,7 @@ class App extends Component {
 
 	componentDidMount() {
 		// Production
-		let dataURL = 'https://gitmaster.wpengine.com/wp-json/wp/v2/movies?_embed';
+		let dataURL = 'https://disneydidfine.wpengine.com//wp-json/wp/v2/movies?_embed';
 
 		fetch(dataURL)
 			.then((res) => res.json())
